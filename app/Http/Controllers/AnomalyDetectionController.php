@@ -47,7 +47,7 @@ class AnomalyDetectionController extends Controller
 
         $dataset = $excel[0];
 
-        $ad->total = sizeof($excel);
+        $ad->total = sizeof($excel[0]);
 
         $startTime = Carbon::now();
         $ad->started_at = $startTime;

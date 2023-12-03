@@ -23,3 +23,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('anomaly-detection/detect', [AnomalyDetectionController::class, 'detect']);
 
 Route::get('downloads/download', [DownloadsController::class, 'download']);
+Route::get('downloads/read', [DownloadsController::class, 'read']);
