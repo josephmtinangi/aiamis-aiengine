@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnomalyDetectionController;
+use App\Http\Controllers\DownloadsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('anomaly-detection/detect', [AnomalyDetectionController::class, 'detect']);
+
+Route::get('downloads/download', [DownloadsController::class, 'download']);

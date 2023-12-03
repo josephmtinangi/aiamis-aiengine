@@ -73,12 +73,12 @@ class AnomalyDetectionController extends Controller
         }
         $ad->anomalies = $anomalies;
 
-        $ad->model_path = $model_filename;
+        $ad->model_path = "model/".$model_filename;
 
         $filename = Carbon::now()->timestamp.'.csv';
         RubixAi::toCsv($results, $filename);
 
-        $ad->file_path = $filename;
+        $ad->file_path = "csv/".$filename;
 
         $ad->save();
 
