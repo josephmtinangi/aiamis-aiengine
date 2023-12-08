@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AnomalyDetection extends Model
+class EstimationAlgorithm extends Model
 {
     use HasFactory;
 
-    public function estimationAlgorithm()
+    public function anomalyDetections()
     {
-        return $this->belongsTo(EstimationAlgorithm::class);
+        return $this->hasMany(AnomalyDetection::class);
     }
 }
